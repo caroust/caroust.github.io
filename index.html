@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -115,18 +115,33 @@
         </div>
     </header>
 
+        <div class="container">
+            <h1>CAROLINA USTÁRIZ</h1>
+            <p class="subtitle">Ingeniera Informática | Líder Técnico | Especialista en Ecommerce & FinTech</p>
+        </div>
+    </header>
+
     <div class="container">
+        <!-- SECCIÓN PROYECTOS -->
         <h2 class="section-title">PROYECTOS DESTACADOS</h2>
+        
+        <!-- CityWallet -->
         <div class="project-card">
             <h3>CITYWALLET</h3>
             <p><em>Pionera en pagos NFC para estacionamientos en Venezuela</em></p>
-            <img src="assets/cw1.png" alt="Banner CityWallet" class="project-image">
-            <div class="image-grid">
+            
+        <!-- Banner principal (imagen horizontal) -->
+        <img src="assets/cw1.png" alt="Banner CityWallet" class="project-image" style="width: 100%; height: auto;">
+
+            <!-- Galería de imágenes -->
+
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr; margin: 20px 0;">
                 <img src="assets/cw4.png" alt="Login CityWallet">
                 <img src="assets/cw5.png" alt="Historial de transacciones">
                 <img src="assets/cw7.jpg" alt="Recarga de saldo">
                 <img src="assets/cw8.jpg" alt="Activación de calcomanía">
             </div>
+
             <ul>
                 <li>Lideré el desarrollo frontend en Angular y la integración con tecnología NFC</li>
                 <li>Arquitectura de backend con AWS</li>
@@ -142,6 +157,7 @@
             </div>
         </div>
 
+        <!-- Bots de Trading -->
         <div class="project-card">
             <h3>BOTS DE TRADING</h3>
             <p><em>Sistema predictivo con 90% de precisión</em></p>
@@ -158,6 +174,7 @@
             </div>
         </div>
 
+        <!-- SECCIÓN EXPERIENCIA -->
         <h2 class="section-title">EXPERIENCIA</h2>
         <div class="project-card">
             <h3>LÍDER DE PROYECTO</h3>
@@ -167,10 +184,14 @@
                 <li>Optimicé flujos de pago en ecommerce, aumentando conversiones en 25%</li>
                 <li>Implementé estrategias SEO incrementando tráfico orgánico en 50%</li>
             </ul>
-            <div class="image-grid">
+
+             <!-- Galería de imágenes -->
+
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr; margin: 20px 0;">
                 <img src="assets/ec1.png">
                 <img src="assets/ec2.png" alt="Ecommerce">
             </div>
+            
             <div class="skills-container">
                 <span class="skill">Gestión de Proyectos</span>
                 <span class="skill">Ecommerce</span>
@@ -180,7 +201,7 @@
             </div>
         </div>
 
-        <h2 class="section-title">TECNOLOGÍAS</h2>
+         <h2 class="section-title">TECNOLOGÍAS</h2>
         <div class="skills-container">
             <span class="skill">React</span>
             <span class="skill">Node.js</span>
@@ -188,9 +209,10 @@
             <span class="skill">Docker</span>
             <span class="skill">Solidity</span>
         </div>
+
     </div>
 
-    <footer>
+       <footer>
         <div class="container">
             <h3>CONTACTO</h3>
             <p>
@@ -204,5 +226,6 @@
             <a href="https://wa.me/584142403001" target="_blank" style="background-color: #25D366; padding: 10px 20px; color: white; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 15px;">Contáctame por WhatsApp</a>
         </div>
     </footer>
+
 </body>
 </html>
