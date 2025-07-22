@@ -3,112 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carolina Ustáriz | Ingeniera Informática</title>
+    <title>Carolina Ustáriz | Ingeniera Informática & Líder Técnico</title>
     <style>
         :root {
-            --primary: #2C3E50; /* Azul profesional */
-            --secondary: #E74C3C; /* Rojo energético */
-            --light: #ECF0F1;
-            --dark: #1A252F;
+            --beige: #ece4d9;
+            --dark: #3a3a3a;
+            --accent: #8b5a2b;
+            --highlight: #d7a97b;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--beige);
             color: var(--dark);
-            max-width: 1200px;
+            line-height: 1.8;
+            margin: 0;
+        }
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 40px 20px;
         }
         header {
-            background: var(--primary);
-            color: white;
-            padding: 2rem 0;
             text-align: center;
-            margin-bottom: 2rem;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         h1 {
-            font-size: 3rem;
+            color: var(--accent);
+            font-size: 2.8rem;
             margin: 0;
-            letter-spacing: 1px;
         }
-        h2 {
-            color: var(--secondary);
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 0.5rem;
-            margin-top: 2rem;
+        .subtitle {
+            color: var(--dark);
+            font-weight: 300;
+            font-size: 1.2rem;
+        }
+        .section-title {
+            color: var(--accent);
+            border-bottom: 2px solid var(--highlight);
+            padding-bottom: 10px;
+            margin-top: 50px;
         }
         .project-card {
             background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid var(--secondary);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--accent);
         }
-        .skills {
+        .project-image {
+            max-width: 100%;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #eee;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .image-grid img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .skills-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin: 1rem 0;
+            margin: 20px 0;
         }
-        .skill-tag {
-            background: var(--primary);
+        .skill {
+            background: var(--accent);
             color: white;
-            padding: 0.3rem 0.8rem;
+            padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.9rem;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.8);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>CAROLINA USTÁRIZ</h1>
-        <p>Ingeniera Informática | Líder Técnico | Especialista en Ecommerce</p>
+        <div class="container">
+            <h1>CAROLINA USTÁRIZ</h1>
+            <p class="subtitle">Ingeniera Informática | Líder Técnico | Especialista en Ecommerce & FinTech</p>
+        </div>
     </header>
 
-    <section>
-        <h2>PROYECTOS DESTACADOS</h2>
+    <div class="container">
+        <!-- SECCIÓN PROYECTOS -->
+        <h2 class="section-title">PROYECTOS DESTACADOS</h2>
         
+        <!-- CityWallet -->
         <div class="project-card">
-            <h3>CITYWALLET VENEZUELA</h3>
-            <p><strong>Pioneros en pagos NFC para estacionamientos</strong></p>
+            <h3>CITYWALLET</h3>
+            <p><em>Pionera en pagos NFC para estacionamientos en Venezuela</em></p>
+            
+            <!-- Galería de imágenes -->
+            <div class="image-grid">
+                <img src="assets/cw1.png" alt="Pantalla principal CityWallet">
+                <img src="assets/cw4.png" alt="Login CityWallet">
+                <img src="assets/cw5.png" alt="Historial de transacciones">
+                <img src="assets/cw7.jpg" alt="Recarga de saldo">
+                <img src="assets/cw8.jpg" alt="Activación de calcomanía">
+            </div>
+
             <ul>
-                <li>Desarrollo frontend en Angular y arquitectura backend con AWS</li>
-                <li>Integración de tecnología NFC en entornos de baja adopción tecnológica</li>
+                <li>Lideré el desarrollo frontend en Angular y la integración con tecnología NFC</li>
+                <li>Arquitectura de backend con AWS</li>
+                <li>Coordinación con municipios para implementación</li>
+                <li><strong>Logro clave:</strong> Primera app en Venezuela en usar NFC para pagos móviles</li>
             </ul>
-            <div class="skills">
-                <span class="skill-tag">Angular</span>
-                <span class="skill-tag">AWS</span>
-                <span class="skill-tag">NFC</span>
+            <div class="skills-container">
+                <span class="skill">Angular</span>
+                <span class="skill">AWS</span>
+                <span class="skill">NFC</span>
+                <span class="skill">UX/UI</span>
+                <span class="skill">Liderazgo Técnico</span>
             </div>
         </div>
 
+        <!-- Bots de Trading -->
         <div class="project-card">
             <h3>BOTS DE TRADING</h3>
-            <p><strong>Sistema predictivo con 90% de precisión</strong></p>
+            <p><em>Sistema predictivo con 90% de precisión</em></p>
             <ul>
                 <li>Desarrollo de algoritmos en Python/C# para análisis de mercados</li>
                 <li>Integración con APIs de exchanges internacionales</li>
+                <li>Modelado de datos financieros</li>
             </ul>
-            <div class="skills">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">C#</span>
-                <span class="skill-tag">FinTech</span>
+            <div class="skills-container">
+                <span class="skill">Python</span>
+                <span class="skill">C#</span>
+                <span class="skill">Análisis Financiero</span>
+                <span class="skill">APIs</span>
             </div>
         </div>
-    </section>
 
-    <section>
-        <h2>EXPERIENCIA</h2>
-        <p><strong>Líder de Proyecto</strong> | 2016 - Actualidad</p>
-        <ul>
-            <li>25+ proyectos internacionales</li>
-            <li>+50% tráfico orgánico en ecommerce</li>
-        </ul>
-    </section>
+        <!-- SECCIÓN EXPERIENCIA -->
+        <h2 class="section-title">EXPERIENCIA</h2>
+        <div class="project-card">
+            <h3>LÍDER DE PROYECTO</h3>
+            <p><em>2016 - Actualidad</em></p>
+            <ul>
+                <li>Dirigí 25+ proyectos internacionales de desarrollo web/móvil</li>
+                <li>Optimicé flujos de pago en ecommerce, aumentando conversiones en 25%</li>
+                <li>Implementé estrategias SEO incrementando tráfico orgánico en 50%</li>
+            </ul>
+            <div class="skills-container">
+                <span class="skill">Gestión de Proyectos</span>
+                <span class="skill">Ecommerce</span>
+                <span class="skill">SEO</span>
+                <span class="skill">Shopify</span>
+                <span class="skill">WordPress</span>
+            </div>
+        </div>
+    </div>
 
-    <footer style="text-align: center; margin-top: 3rem; padding: 1rem; background: var(--primary); color: white;">
-        <p>Contacto: +58 414 2403001 | caroust@gmail.com</p>
+    <footer>
+        <div class="container">
+            <h3>CONTACTO</h3>
+            <p>📍 Caracas, Venezuela | 📞 +58 414 2403001</p>
+            <p>✉️ caroust@gmail.com | 🔗 linkedin.com/in/tu-perfil</p>
+        </div>
     </footer>
 </body>
 </html>
