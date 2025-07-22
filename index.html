@@ -1,26 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi Portafolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolina Ustáriz | Ingeniera Informática</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #333; }
-        a { color: #0366d6; text-decoration: none; }
+        :root {
+            --primary: #2C3E50; /* Azul profesional */
+            --secondary: #E74C3C; /* Rojo energético */
+            --light: #ECF0F1;
+            --dark: #1A252F;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+        h2 {
+            color: var(--secondary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid var(--secondary);
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 1rem 0;
+        }
+        .skill-tag {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
-    <h1>Hola, soy Carolina Ustáriz</h1>
-    <p>Desarrollador frontend con experiencia en Angular y tecnologías NFC.</p>
-    
-    <h2>Mis Proyectos</h2>
-    <ul>
-        <li><a href="proyectos/citywallet.md">CityWallet</a>: App pionera en pagos de estacionamiento con NFC en Venezuela.</li>
-        <img src="assets/cw3.jpg" alt="Captura CityWallet">
-        <li><a href="[enlace-a-tu-otro-proyecto]">BOT de Trading</a></li>
-    </ul>
-    
-    <h2>Contacto</h2>
-    <p>📧 Email: caroust@gmail.com<br>
-    🔗 <a href="https://www.linkedin.com/in/carolinaust/">LinkedIn</a></p>
+    <header>
+        <h1>CAROLINA USTÁRIZ</h1>
+        <p>Ingeniera Informática | Líder Técnico | Especialista en Ecommerce</p>
+    </header>
+
+    <section>
+        <h2>PROYECTOS DESTACADOS</h2>
+        
+        <div class="project-card">
+            <h3>CITYWALLET VENEZUELA</h3>
+            <p><strong>Pioneros en pagos NFC para estacionamientos</strong></p>
+            <ul>
+                <li>Desarrollo frontend en Angular y arquitectura backend con AWS</li>
+                <li>Integración de tecnología NFC en entornos de baja adopción tecnológica</li>
+            </ul>
+            <div class="skills">
+                <span class="skill-tag">Angular</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">NFC</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <h3>BOTS DE TRADING</h3>
+            <p><strong>Sistema predictivo con 90% de precisión</strong></p>
+            <ul>
+                <li>Desarrollo de algoritmos en Python/C# para análisis de mercados</li>
+                <li>Integración con APIs de exchanges internacionales</li>
+            </ul>
+            <div class="skills">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C#</span>
+                <span class="skill-tag">FinTech</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>EXPERIENCIA</h2>
+        <p><strong>Líder de Proyecto</strong> | 2016 - Actualidad</p>
+        <ul>
+            <li>25+ proyectos internacionales</li>
+            <li>+50% tráfico orgánico en ecommerce</li>
+        </ul>
+    </section>
+
+    <footer style="text-align: center; margin-top: 3rem; padding: 1rem; background: var(--primary); color: white;">
+        <p>Contacto: +58 414 2403001 | caroust@gmail.com</p>
+    </footer>
 </body>
 </html>
