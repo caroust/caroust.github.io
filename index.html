@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carolina Ustáriz | Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@300;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --beige: #ece4d9;
@@ -12,7 +13,7 @@
             --highlight: #d7a97b;
         }
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background-color: var(--beige);
             color: var(--dark);
             line-height: 1.8;
@@ -25,13 +26,12 @@
         }
         header {
             text-align: center;
-            padding: 40px 0;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #f5f5f5, #ece4d9);
         }
         h1 {
             color: var(--accent);
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin: 0;
         }
         .subtitle {
@@ -50,8 +50,18 @@
             padding: 30px;
             margin: 30px 0;
             border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             border-left: 4px solid var(--accent);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
         }
         .project-image {
             max-width: 100%;
@@ -66,10 +76,6 @@
             gap: 15px;
             margin: 20px 0;
         }
-        .image-grid img {
-            width: 100%;
-            border-radius: 5px;
-        }
         .skills-container {
             display: flex;
             flex-wrap: wrap;
@@ -82,6 +88,15 @@
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.9rem;
+        }
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
         }
         footer {
             text-align: center;
@@ -96,30 +111,22 @@
         <div class="container">
             <h1>CAROLINA USTÁRIZ</h1>
             <p class="subtitle">Ingeniera Informática | Líder Técnico | Especialista en Ecommerce & FinTech</p>
+            <a class="download-btn" href="CV_Carolina_Ustariz.pdf" download>Descargar CV</a>
         </div>
     </header>
 
     <div class="container">
-        <!-- SECCIÓN PROYECTOS -->
         <h2 class="section-title">PROYECTOS DESTACADOS</h2>
-        
-        <!-- CityWallet -->
         <div class="project-card">
             <h3>CITYWALLET</h3>
             <p><em>Pionera en pagos NFC para estacionamientos en Venezuela</em></p>
-            
-        <!-- Banner principal (imagen horizontal) -->
-        <img src="assets/cw1.png" alt="Banner CityWallet" class="project-image" style="width: 100%; height: auto;">
-
-            <!-- Galería de imágenes -->
-
-            <div class="image-grid" style="grid-template-columns: 1fr 1fr; margin: 20px 0;">
+            <img src="assets/cw1.png" alt="Banner CityWallet" class="project-image">
+            <div class="image-grid">
                 <img src="assets/cw4.png" alt="Login CityWallet">
                 <img src="assets/cw5.png" alt="Historial de transacciones">
                 <img src="assets/cw7.jpg" alt="Recarga de saldo">
                 <img src="assets/cw8.jpg" alt="Activación de calcomanía">
             </div>
-
             <ul>
                 <li>Lideré el desarrollo frontend en Angular y la integración con tecnología NFC</li>
                 <li>Arquitectura de backend con AWS</li>
@@ -135,7 +142,6 @@
             </div>
         </div>
 
-        <!-- Bots de Trading -->
         <div class="project-card">
             <h3>BOTS DE TRADING</h3>
             <p><em>Sistema predictivo con 90% de precisión</em></p>
@@ -152,7 +158,6 @@
             </div>
         </div>
 
-        <!-- SECCIÓN EXPERIENCIA -->
         <h2 class="section-title">EXPERIENCIA</h2>
         <div class="project-card">
             <h3>LÍDER DE PROYECTO</h3>
@@ -162,14 +167,10 @@
                 <li>Optimicé flujos de pago en ecommerce, aumentando conversiones en 25%</li>
                 <li>Implementé estrategias SEO incrementando tráfico orgánico en 50%</li>
             </ul>
-
-             <!-- Galería de imágenes -->
-
-            <div class="image-grid" style="grid-template-columns: 1fr 1fr; margin: 20px 0;">
+            <div class="image-grid">
                 <img src="assets/ec1.png">
                 <img src="assets/ec2.png" alt="Ecommerce">
             </div>
-            
             <div class="skills-container">
                 <span class="skill">Gestión de Proyectos</span>
                 <span class="skill">Ecommerce</span>
@@ -178,33 +179,29 @@
                 <span class="skill">WordPress</span>
             </div>
         </div>
+
+        <h2 class="section-title">TECNOLOGÍAS</h2>
+        <div class="skills-container">
+            <span class="skill">React</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">PHP</span>
+            <span class="skill">Docker</span>
+            <span class="skill">Solidity</span>
+        </div>
     </div>
 
     <footer>
         <div class="container">
             <h3>CONTACTO</h3>
-             <p>
+            <p>
                 📍 Caracas, Venezuela | 
-                📞 <a href="https://wa.me/584142403001" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   style="color: inherit; text-decoration: none; transition: all 0.3s ease;"
-                   onmouseover="this.style.color='#0077B5'; this.style.textDecoration='underline'"
-                   onmouseout="this.style.color='inherit'; this.style.textDecoration='none'">
-                   +584142403001
-                </a>
+                📞 <a href="https://wa.me/584142403001" target="_blank" style="color: inherit; text-decoration: none;">+584142403001</a>
             </p>
-           <p>
+            <p>
                 ✉️ caroust@gmail.com | 
-                🔗 <a href="http://linkedin.com/in/carolinaust" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   style="color: inherit; text-decoration: none; transition: all 0.3s ease;"
-                   onmouseover="this.style.color='#0077B5'; this.style.textDecoration='underline'"
-                   onmouseout="this.style.color='inherit'; this.style.textDecoration='none'">
-                   linkedin.com/in/carolinaust
-                </a>
+                🔗 <a href="http://linkedin.com/in/carolinaust" target="_blank" style="color: inherit; text-decoration: none;">linkedin.com/in/carolinaust</a>
             </p>
+            <a href="https://wa.me/584142403001" target="_blank" style="background-color: #25D366; padding: 10px 20px; color: white; border-radius: 25px; text-decoration: none; display: inline-block; margin-top: 15px;">Contáctame por WhatsApp</a>
         </div>
     </footer>
 </body>
