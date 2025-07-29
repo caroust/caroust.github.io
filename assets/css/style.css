@@ -1031,14 +1031,14 @@ hr {
 }
 
 .v-line-block {
-	position: absolute;
-	left: -100px;
-	top: -150px;
-	bottom: -30px;
-	width: 2px;
-	background: #000;
-	z-index: 3;
-	pointer-events: none;
+    position: absolute;
+    left: -100px;
+    top: -250px;       /* Extendido más arriba (-250px en lugar de -150px) */
+    bottom: -50px;     /* Extendido más abajo */
+    width: 2px;
+    background: #000;
+    z-index: 3;
+    pointer-events: none;
 }
 
 .v-line-left .v-line-block {
@@ -1073,31 +1073,31 @@ hr {
 }
 
 .v-line-block:before {
-	content: '';
-	position: absolute;
-	left: -15px;
-	top: -15px;
-	width: 30px;
-	height: 30px;
-	background: #fff;
-	border: 2px solid #000;
-	border-radius: 30px;
-	box-shadow: 5px 5px rgb(0 0 0 / 20%);
-	z-index: 1;
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    width: 32px;       /* Aumentado ligeramente */
+    height: 32px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    box-shadow: 5px 5px rgba(0,0,0,0.2);
+    z-index: 4;        /* Mayor z-index para asegurar visibilidad */
 }
 
 .v-line-block:after {
-	content: '';
-	position: absolute;
-	left: -15px;
-	bottom: -15px;
-	width: 30px;
-	height: 30px;
-	background: #fff;
-	border: 2px solid #000;
-	border-radius: 30px;
-	box-shadow: 5px 5px rgb(0 0 0 / 20%);
-	z-index: 1;
+    content: '';
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    box-shadow: 5px 5px rgba(0,0,0,0.2);
+    z-index: 4;
 }
 
 .v-line-top .v-line-block span {
