@@ -1077,8 +1077,8 @@ hr {
 	position: absolute;
 	left: -15px;
 	top: 0;
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	background: #fff;
 	border: 2px solid #000;
 	border-radius: 30px;
@@ -1091,8 +1091,8 @@ hr {
 	position: absolute;
 	left: -15px;
 	bottom: 0;
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	background: #fff;
 	border: 2px solid #000;
 	border-radius: 30px;
