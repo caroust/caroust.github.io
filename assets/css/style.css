@@ -1033,8 +1033,8 @@ hr {
 .v-line-block {
     position: absolute;
     left: -100px;
-    top: -250px;       /* Extendido más arriba (-250px en lugar de -150px) */
-    bottom: -50px;     /* Extendido más abajo */
+    top: -180px;       /* Extendido más arriba (-250px en lugar de -150px) */
+    bottom: -80px;     /* Extendido más abajo */
     width: 2px;
     background: #000;
     z-index: 3;
