@@ -2410,6 +2410,7 @@ hr {
 
 .section.hero-started {
 	position: relative;
+	overflow: visible !important;
 }
 
 .section.hero-started .slide {
