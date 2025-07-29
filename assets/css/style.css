@@ -1033,8 +1033,8 @@ hr {
 .v-line-block {
     position: absolute;
     left: -100px;
-    top: -180px;       /* Extendido más arriba (-250px en lugar de -150px) */
-    bottom: -80px;     /* Extendido más abajo */
+    top: -250px;
+    bottom: -30px;
     width: 2px;
     background: #000;
     z-index: 3;
@@ -1077,13 +1077,13 @@ hr {
     position: absolute;
     left: -15px;
     top: -15px;
-    width: 32px;       /* Aumentado ligeramente */
-    height: 32px;
+    width: 30px;
+    height: 30px;
     background: #fff;
     border: 2px solid #000;
     border-radius: 50%;
     box-shadow: 5px 5px rgba(0,0,0,0.2);
-    z-index: 4;        /* Mayor z-index para asegurar visibilidad */
+    z-index: 4;
 }
 
 .v-line-block:after {
@@ -1091,8 +1091,8 @@ hr {
     position: absolute;
     left: -15px;
     bottom: -15px;
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     background: #fff;
     border: 2px solid #000;
     border-radius: 50%;
