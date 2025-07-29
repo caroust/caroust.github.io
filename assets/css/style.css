@@ -1024,6 +1024,8 @@ hr {
 
 .lui-section {
 	padding-bottom: 220px;
+	overflow: visible !important; /* Añade esto si es necesario */
+}
 }
 
 .disabled {
@@ -1033,7 +1035,7 @@ hr {
 .v-line-block {
     position: absolute;
     left: -100px;
-    top: -250px;
+    top: -150px;
     bottom: -30px;
     width: 2px;
     background: #000;
@@ -1052,6 +1054,7 @@ hr {
 }
 
 .hero-started .v-line-block {
+	top: -150px;
 	bottom: -70px;
 }
 
