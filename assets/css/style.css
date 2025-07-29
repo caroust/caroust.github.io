@@ -1033,7 +1033,7 @@ hr {
 .v-line-block {
 	position: absolute;
 	left: -100px;
-	top: -40px;
+	top: -35px;
 	bottom: -15px;
 	width: 2px;
 	background: #000;
@@ -1076,7 +1076,7 @@ hr {
 	content: '';
 	position: absolute;
 	left: -10px;
-	top: -40px;
+	top: -35px;
 	width: 20px;
 	height: 20px;
 	background: #fff;
