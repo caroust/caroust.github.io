@@ -1036,7 +1036,7 @@ hr {
   left: -100px;
   top: 0;          /* Inicia desde el borde superior del contenedor */
   bottom: auto;    /* Elimina el estiramiento hacia abajo */
-  height: 300px;   /* Altura personalizada (ajusta según necesites) */
+  height: 1000px;   /* Altura personalizada (ajusta según necesites) */
   width: 2px;
   background: #000;
   z-index: 3;
