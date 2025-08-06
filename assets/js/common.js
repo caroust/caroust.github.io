@@ -480,43 +480,40 @@ function initCursor() {
 	}
 
 	/*
-		Validate Contact Form
-	*/
-	if($('.contacts-form').length) {
-	$('#cform').validate({
-		rules: {
-			name: {
-				required: true
-			},
-			message: {
-				required: true
-			},
-			email: {
-				required: true,
-				email: true
-			}
-		},
-		success: 'valid',
-		submitHandler: function() {
-			$.ajax({
-				url: 'mailer/feedback.php',
-				type: 'post',
-				dataType: 'json',
-				data: 'name='+ $("#cform").find('input[name="name"]').val() + '&email='+ $("#cform").find('input[name="email"]').val() + '&subject='+ $("#cform").find('input[name="subject"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
-				beforeSend: function() {
-
-				},
-				complete: function() {
-
-				},
-				success: function(data) {
-					$('#cform').fadeOut();
-					$('.alert-success').delay(1000).fadeIn();
-				}
-			});
-		}
-	});
-	}
+    Contact Form Handler for FormSubmit
+*/
+if($('.contacts-form').length) {
+  $('#cform').on('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    var submitBtn = $(form).find('button[type="submit"]');
+    
+    submitBtn.html('<span>Sending...</span>').prop('disabled', true);
+    
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(response => {
+      if(response.ok) {
+        $(form).fadeOut();
+        $('.alert-success').delay(1000).fadeIn();
+        setTimeout(() => {
+          window.location.href = $(form).find('input[name="_next"]').val();
+        }, 3000);
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      submitBtn.html('<span>Error, try again</span>');
+      setTimeout(() => {
+        submitBtn.html('<span>Send Message</span>').prop('disabled', false);
+      }, 2000);
+    });
+  });
+}
 }
 
 function setHeightFullSection() {
