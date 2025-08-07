@@ -3612,7 +3612,41 @@ hr {
 /**
 * Section Contacts
 **/
+/* Estilos para los mensajes */
+.alert-success {
+  background: rgba(108, 99, 255, 0.1);
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 20px;
+  display: none;
+}
 
+.success-message i {
+  color: #4CAF50;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.error-message i {
+  color: #f44336;
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.btn.new-message {
+  background: #6c63ff;
+}
+
+.btn-link {
+  color: #6c63ff;
+  margin-left: 15px;
+}
+
+/* Final de Estilos para los mensajes */
 .numbers-items {
 	position: relative;
 	z-index: 2;
