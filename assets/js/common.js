@@ -482,7 +482,7 @@ function initCursor() {
 	/*
     Contact Form Handler for FormSubmit
 */
-// En tu common.js - Versión mejorada
+// En tu common.js - Versión minimalista
 if($('.contacts-form').length) {
   $('#cform').on('submit', function(e) {
     e.preventDefault();
@@ -491,7 +491,7 @@ if($('.contacts-form').length) {
     const submitBtn = $(form).find('button[type="submit"]');
 
     // Estado "enviando"
-    submitBtn.html('<span><i class="fas fa-spinner fa-spin"></i> Sending...</span>').prop('disabled', true);
+    submitBtn.html('<span>Sending...</span>').prop('disabled', true);
     alertBox.hide();
 
     fetch(form.action, {
@@ -502,16 +502,13 @@ if($('.contacts-form').length) {
       if(response.ok) {
         form.reset(); // Limpia el formulario
         alertBox.html(`
-          <div class="success-message">
-            <i class="fas fa-check-circle"></i>
-            <h4>Message sent!</h4>
-            <p>I'll respond within 24 hours</p>
-            <div class="actions">
-              <a href="#" class="btn new-message">Send another</a>
-              <a href="/" class="btn-link">Go to homepage</a>
-            </div>
-          </div>
+          <p style="margin:0; color:#4CAF50; font-weight:500;">✓ Message sent successfully</p>
         `).fadeIn();
+        
+        // Ocultar después de 3 segundos
+        setTimeout(() => {
+          alertBox.fadeOut();
+        }, 3000);
       } else {
         throw new Error('Server response not OK');
       }
@@ -519,22 +516,12 @@ if($('.contacts-form').length) {
     .catch(error => {
       console.error('Error:', error);
       alertBox.html(`
-        <div class="error-message">
-          <i class="fas fa-exclamation-circle"></i>
-          <h4>Error!</h4>
-          <p>Please try again later</p>
-          <button class="btn retry-btn">Retry</button>
-        </div>
+        <p style="margin:0; color:#f44336; font-weight:500;">Error sending message</p>
       `).fadeIn();
     })
     .finally(() => {
       submitBtn.html('<span>Send Message</span>').prop('disabled', false);
     });
-  });
-
-  // Opcional: Manejador para el botón "Send another"
-  $(document).on('click', '.new-message, .retry-btn', function() {
-    $('.alert-success').fadeOut();
   });
 }
 }
