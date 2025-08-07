@@ -482,36 +482,59 @@ function initCursor() {
 	/*
     Contact Form Handler for FormSubmit
 */
+// En tu common.js - Versión mejorada
 if($('.contacts-form').length) {
   $('#cform').on('submit', function(e) {
     e.preventDefault();
-    var form = this;
-    var submitBtn = $(form).find('button[type="submit"]');
-    
-    submitBtn.html('<span>Sending...</span>').prop('disabled', true);
-    
+    const form = this;
+    const alertBox = $('.alert-success');
+    const submitBtn = $(form).find('button[type="submit"]');
+
+    // Estado "enviando"
+    submitBtn.html('<span><i class="fas fa-spinner fa-spin"></i> Sending...</span>').prop('disabled', true);
+    alertBox.hide();
+
     fetch(form.action, {
       method: 'POST',
       body: new FormData(form)
     })
     .then(response => {
       if(response.ok) {
-        $(form).fadeOut();
-        $('.alert-success').delay(1000).fadeIn();
-        setTimeout(() => {
-          window.location.href = $(form).find('input[name="_next"]').val();
-        }, 3000);
+        form.reset(); // Limpia el formulario
+        alertBox.html(`
+          <div class="success-message">
+            <i class="fas fa-check-circle"></i>
+            <h4>Message sent!</h4>
+            <p>I'll respond within 24 hours</p>
+            <div class="actions">
+              <a href="#" class="btn new-message">Send another</a>
+              <a href="/" class="btn-link">Go to homepage</a>
+            </div>
+          </div>
+        `).fadeIn();
       } else {
-        throw new Error('Network response was not ok');
+        throw new Error('Server response not OK');
       }
     })
     .catch(error => {
       console.error('Error:', error);
-      submitBtn.html('<span>Error, try again</span>');
-      setTimeout(() => {
-        submitBtn.html('<span>Send Message</span>').prop('disabled', false);
-      }, 2000);
+      alertBox.html(`
+        <div class="error-message">
+          <i class="fas fa-exclamation-circle"></i>
+          <h4>Error!</h4>
+          <p>Please try again later</p>
+          <button class="btn retry-btn">Retry</button>
+        </div>
+      `).fadeIn();
+    })
+    .finally(() => {
+      submitBtn.html('<span>Send Message</span>').prop('disabled', false);
     });
+  });
+
+  // Opcional: Manejador para el botón "Send another"
+  $(document).on('click', '.new-message, .retry-btn', function() {
+    $('.alert-success').fadeOut();
   });
 }
 }
